@@ -1,0 +1,12 @@
+[
+  {
+    "Name": "Desktop Debug",
+    "Projects": [
+      {
+        "Name": "TR5.vbproj",
+        "Action": "Start",
+        "DebugTarget": ""
+      }
+    ]
+  }
+]

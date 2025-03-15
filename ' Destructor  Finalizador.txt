@@ -1,0 +1,16 @@
+' Destructor / Finalizador
+'en esta clase pretendo eliminar todo los bordes en almacenasdos en BorderPLines
+'Protected Overrides Sub Finalize()
+'    Try
+'        ' Código que quieres ejecutar al finalizar la clase
+'        For Each BorderPLine As BorderPLines In BorderPLines.Values
+'            CLHandle.EraseObjectByHandle(CLHandle.Chandle(BorderPLine.Handle))
+'        Next
+'        Console.WriteLine("Clase finalizada")
+'    Finally
+'        ' Siempre debes llamar a MyBase.Finalize
+'        MyBase.Finalize()
+'    End Try
+'End Sub
+
+AccesoNum

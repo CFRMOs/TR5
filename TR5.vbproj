@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{AE06268E-FCFC-417D-AA6A-A6CF1626027E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TR5.Civil3D</RootNamespace>
+    <AssemblyName>TR5</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <!-- Add this line to suppress MSB3305 warning -->
+    <NoWarn>$(NoWarn);MSB3305</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>Off</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TR5.Civil3D.Form1</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Remote-Debugger|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Remote-Debugger\</OutputPath>
+    <DocumentationFile>TR5.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Remote-Debugger|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Remote-Debugger\</OutputPath>
+    <DocumentationFile>TR5.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Remote-Debugger|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\ARM64\Remote-Debugger\</OutputPath>
+    <DocumentationFile>TR5.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TR5.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>TR5.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DocumentationFile>TR5.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Remote debugger home|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Remote debugger home\</OutputPath>
+    <DocumentationFile>TR5.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Remote debugger home|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Remote debugger home\</OutputPath>
+    <DocumentationFile>TR5.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Remote debugger home|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\ARM64\Remote debugger home\</OutputPath>
+    <DocumentationFile>TR5.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AcCoreMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>D:\Desktop\Autocad\ObjectARX_for_AutoCAD_2024_Win_64bit_dlm\inc\AcCoreMgd.dll</HintPath>
+    </Reference>
+    <Reference Include="AcDbMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>D:\Desktop\Autocad\ObjectARX_for_AutoCAD_2024_Win_64bit_dlm\inc\AcDbMgd.dll</HintPath>
+    </Reference>
+    <Reference Include="AcMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>D:\Desktop\Autocad\ObjectARX_for_AutoCAD_2024_Win_64bit_dlm\inc\AcMgd.dll</HintPath>
+    </Reference>
+    <Reference Include="AecBaseMgd">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2024\AecBaseMgd.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AeccAdpMgd, Version=13.6.342.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2024\C3D\AeccAdpMgd.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <!--Map 3D References-->
+    <!--Civil 3D Refernces-->
+    <Reference Include="AeccDbMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autodesk.AutoCAD.Interop">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2024\Autodesk.AutoCAD.Interop.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autodesk.AutoCAD.Interop.Common">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2024\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.118.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <!--ACA References Begin-->
+    <!--ACA Refences End-->
+    <!--AME Referebces Begin-->
+    <!--AME Reference End-->
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Autodesk.Aec" />
+    <Import Include="Autodesk.Aec.ApplicationServices" />
+    <Import Include="Autodesk.Aec.DatabaseServices" />
+    <Import Include="Autodesk.Aec.Geometry" />
+    <Import Include="Autodesk.AutoCAD" />
+    <Import Include="Autodesk.AutoCAD.ApplicationServices" />
+    <Import Include="Autodesk.Civil.DatabaseServices" />
+    <Import Include="Autodesk.Civil.DatabaseServices.Styles" />
+    <Import Include="Autodesk.Civil.Runtime" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autocad\Alignments\AlignmentHelper.vb" />
+    <Compile Include="Autocad\Calculos de talud\PosicionDrenajeSuperficial.vb" />
+    <Compile Include="Autocad\CCVManager\CCVAreasDataItem.vb" />
+    <Compile Include="Autocad\CGPoints\CGPointHelper.vb" />
+    <Compile Include="Autocad\CGPoints\CGStyles\CogoPointStyleManager.vb" />
+    <Compile Include="Autocad\CGPoints\cmds.vb" />
+    <Compile Include="Autocad\cunetas solapada\CCunetasAreaPlanta.vb" />
+    <Compile Include="Autocad\Handle\AutoCADUtilities.vb" />
+    <Compile Include="Autocad\Labels\GeneralLabelCreator.vb" />
+    <Compile Include="Autocad\Labels\CMDs\LabelTestCommands.vb" />
+    <Compile Include="Autocad\Labels\Rutinas\GetLabelTextFromSLEnt.vb" />
+    <Compile Include="Autocad\Polilinea\BoundaryProcessor.vb" />
+    <Compile Include="Autocad\Polilinea\Prop\PolylineModifier.vb" />
+    <Compile Include="Autocad\Wblockes\Civil3DWBlockManager.vb" />
+    <Compile Include="Dato\CunetasHandleDataItem.vb" />
+    <Compile Include="Excel\ExcelFilters.vb" />
+    <Compile Include="Excel\Revision Soportes\RevisionSoporteExcel.vb" />
+    <Compile Include="Autocad\Manejo Base\AutoCADHelper.vb" />
+    <Compile Include="Autocad\Manejo Base\AutoCADHelper2.vb" />
+    <Compile Include="Autocad\Labels\GeneralSegmentLabelHelper.vb" />
+    <Compile Include="Autocad\Labels\StationOffsetLabelCreator.vb" />
+    <Compile Include="Dato\DataBSQLManager.vb" />
+    <Compile Include="Autocad\Polilinea\Class3.vb" />
+    <Compile Include="COMAutocad24\AutoCADEmbedder.vb" />
+    <Compile Include="Excel\ExcelOptimizer.vb" />
+    <Compile Include="Excel\descartados\CMDCheckExcelRange.vb" />
+    <Compile Include="Excel\AddTabPage\AddToForm.vb" />
+    <Compile Include="Excel\UpdateExcelTable.vb" />
+    <Compile Include="File\CarpetaProcessor.vb" />
+    <Compile Include="Form\Ctrols\ControlsEvents\EventHandlerClass.vb" />
+    <Compile Include="Form\Ctrols\ControlsEvents\EventHandlerParmetrictClass.vb" />
+    <Compile Include="Form\Ctrols\ControlsEvents\UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Ctrols\ControlsEvents\UserControl1.vb" />
+    <Compile Include="Form\Ctrols\CtrlsAccion\CtrolAccionsExcel.vb" />
+    <Compile Include="Form\Ctrols\CtrlsAccion\CtrolsButtonsUT.vb" />
+    <Compile Include="Form\Ctrols\CtrlsAccion\CtrolsTextBoxesUT.vb" />
+    <Compile Include="Form\DataView\DataGridViewEventHandler.vb" />
+    <Compile Include="Form\DataView\DataGridViewHelper.vb" />
+    <Compile Include="Form\DataView\DateViewSet.vb" />
+    <Compile Include="Form\DataView\UpdateDataDGV.vb" />
+    <Compile Include="Form\Ctrols\Tabcontrols\ControlManager.vb" />
+    <Compile Include="Form\Ctrols\Tabcontrols\TabControlManager.vb" />
+    <Compile Include="Form\Ctrols\Tabcontrols\GetControlsDGView.vb" />
+    <Compile Include="Autocad\Polilinea\IdentifyPL.vb" />
+    <Compile Include="Autocad\Drawings\ACAdHelpers.vb" />
+    <Compile Include="Autocad\Layers\ClGroupLayerHelper.vb" />
+    <Compile Include="Autocad\Layers\LayerColorChanger.vb" />
+    <Compile Include="COMAutocad24\AutoCADHandler.vb" />
+    <Compile Include="Autocad\Polilinea\CommandTestGetStInline.vb" />
+    <Compile Include="Autocad\Polilinea\PolilineasAyacentes.vb" />
+    <Compile Include="Excel\descartados\AutoCADExcelIntegration.vb" />
+    <Compile Include="Excel\descartados\CExcelApp.vb" />
+    <Compile Include="Excel\descartados\Class4.vb" />
+    <Compile Include="Excel\descartados\DataTransferManager.vb" />
+    <Compile Include="Excel\ExcelAppTR.vb" />
+    <Compile Include="Excel\descartados\ExcelFunctions.vb" />
+    <Compile Include="Excel\ExcelManager.vb" />
+    <Compile Include="Excel\ExcelRangeSelector.vb" />
+    <Compile Include="Excel\TblManagementExc.vb" />
+    <Compile Include="Excel\descartados\TranferSlapingInf.vb" />
+    <Compile Include="Autocad\Parcelas\Civil3DHelper.vb" />
+    <Compile Include="Autocad\Parcelas\ParcelCommands.vb" />
+    <Compile Include="Autocad\Parcelas\VersionChecker.vb" />
+    <Compile Include="Autocad\Parcelas\GetFeatureLinePoint.vb" />
+    <Compile Include="Autocad\Polilinea\CMDFeaturelineToPolyline.vb" />
+    <Compile Include="Autocad\Polilinea\PolylineConverter\CMDPolylineC.vb" />
+    <Compile Include="Autocad\Polilinea\PolylineOperations.vb" />
+    <Compile Include="Autocad\Polilinea\IdentificarPolilineas.vb" />
+    <Compile Include="Autocad\1-Ej\OverlapCheckCommand.vb" />
+    <Compile Include="Autocad\1-Ej\SQLite.vb" />
+    <Compile Include="Autocad\SectionView\GetParcelSegments.vb" />
+    <Compile Include="Autocad\Polilinea\FindCentroidCommand.vb" />
+    <Compile Include="Autocad\Parcelas\ParcelSegmentLine.vb" />
+    <Compile Include="Autocad\Viewport\FindObjectInViewport.vb" />
+    <Compile Include="Autocad\Polilinea\PolilineaDivider.vb" />
+    <Compile Include="Autocad\1-Ej\Module3.vb" />
+    <Compile Include="Autocad\1-Ej\SolidCreation.vb" />
+    <Compile Include="Autocad\1-Ej\PointGathering.vb" />
+    <Compile Include="Autocad\1-Ej\ListAttributes.vb" />
+    <Compile Include="Autocad\1-Ej\DynamicBlockProps.vb" />
+    <Compile Include="Autocad\Polilinea\TraceCenterLine.vb" />
+    <Compile Include="Autocad\Polilinea\PolylineConverter\SplitPolyline.vb" />
+    <Compile Include="Autocad\SectionView\SectionViewToPolyline.vb" />
+    <Compile Include="Autocad\Drawings\CMDDrawingRetrieval.vb" />
+    <Compile Include="Autocad\Funciones genericas\CollectPoints.vb" />
+    <Compile Include="Autocad\1-Ej\CMdAplTest.vb" />
+    <Compile Include="Autocad\1-Command\CMDTestEnt.vb" />
+    <Compile Include="Autocad\1-Ej\Module2.vb" />
+    <Compile Include="Autocad\Alignments\AlignmentExtractor.vb" />
+    <Compile Include="Autocad\Polilinea\PolylineConverter\PolylineC.vb" />
+    <Compile Include="Autocad\Stations\ej\03-AutoCADEntitiesFinder.vb" />
+    <Compile Include="Autocad\Stations\01-AlignmentLabelHelper.vb" />
+    <Compile Include="Autocad\Stations\ej\02-FindPolylinesBetweenStations.vb" />
+    <Compile Include="Autocad\Stations\ej\04-FindPolylinesBetweenStations.vb" />
+    <Compile Include="Autocad\Stations\CMD\02-AutoCADEntitiesFinder.vb" />
+    <Compile Include="Autocad\Stations\CMD\00-CMDGetStationLabelOffset.vb" />
+    <Compile Include="Autocad\Surfaces\CMDSurfaces.vb" />
+    <Compile Include="Autocad\1-Ej\Ejemplos Group layer.vb" />
+    <Compile Include="Autocad\Funciones genericas\Zoom.vb" />
+    <Compile Include="Autocad\Funciones genericas\Seleccion.vb" />
+    <Compile Include="Autocad\Funciones genericas\Layers.vb" />
+    <Compile Include="Autocad\1-Ej\CMDLayerTools.vb" />
+    <Compile Include="Autocad\Parcelas\Parcelas.vb" />
+    <Compile Include="Autocad\1-Command\MostrarInfoLayer.vb" />
+    <Compile Include="Autocad\Handle\CLHandle.vb" />
+    <Compile Include="Autocad\setSelection\UserSelection.vb" />
+    <Compile Include="Autocad\Stations\CMDGetlabelStation.vb" />
+    <Compile Include="Autocad\setSelection\CSelectionHelper.vb" />
+    <Compile Include="Autocad\Layers\CLayerHelpers.vb" />
+    <Compile Include="Dato\HandleDataProcessor.vb" />
+    <Compile Include="Autocad\Stations\CStationOffsetLabel.vb" />
+    <Compile Include="Autocad\1-Command\CmdRefAlignPoly.vb" />
+    <Compile Include="Autocad\Funciones genericas\GetAcadDocument.vb" />
+    <Compile Include="Autocad\Surfaces\SurfaceExtraction.vb" />
+    <Compile Include="Autocad\SectionView\MGSV.vb" />
+    <Compile Include="Form\LayerSl.Designer.vb">
+      <DependentUpon>LayerSl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LayerSl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ListadoRelacionados.Designer.vb">
+      <DependentUpon>ListadoRelacionados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ListadoRelacionados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PolylineMG.Designer.vb">
+      <DependentUpon>PolylineMG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PolylineMG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Operaciones\Operaciones.vb" />
+    <Compile Include="patrones\CodigoExtractor.vb" />
+    <Compile Include="patrones\Module1.vb" />
+    <Compile Include="SQL\DatabaseHelper.vb" />
+    <Compile Include="URLAcces\FileSearcher.vb" />
+    <Compile Include="Word\WordManager.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\Ctrols\ControlsEvents\UserControl1.resx">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LayerSl.resx">
+      <DependentUpon>LayerSl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ListadoRelacionados.resx">
+      <DependentUpon>ListadoRelacionados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PolylineMG.resx">
+      <DependentUpon>PolylineMG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="app.config" />
+    <None Include="autoNetload - Home.scr" />
+    <None Include="autoNetload.scr" />
+    <None Include="autoNetloadref.scr" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="packages\EntityFramework.6.4.4\.signature.p7s" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\build\EntityFramework.DefaultItems.props" />
+    <None Include="packages\EntityFramework.6.4.4\build\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\build\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\build\netcoreapp3.0\EntityFramework.props" />
+    <None Include="packages\EntityFramework.6.4.4\build\netcoreapp3.0\EntityFramework.targets" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\App.config.install.xdt" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\App.config.transform" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\Web.config.install.xdt" />
+    <None Include="packages\EntityFramework.6.4.4\content\net40\Web.config.transform" />
+    <None Include="packages\EntityFramework.6.4.4\EntityFramework.6.4.4.nupkg" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.PS2.psd1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.PS2.psm1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.psd1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\EntityFramework6.psm1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\init.ps1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\install.ps1" />
+    <None Include="packages\EntityFramework.6.4.4\tools\netcoreapp3.0\any\ef6.runtimeconfig.json" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\.signature.p7s" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\buildTransitive\net20\Stub.System.Data.SQLite.Core.NetFramework.targets" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\buildTransitive\net40\Stub.System.Data.SQLite.Core.NetFramework.targets" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\buildTransitive\net451\Stub.System.Data.SQLite.Core.NetFramework.targets" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\buildTransitive\net45\Stub.System.Data.SQLite.Core.NetFramework.targets" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\buildTransitive\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net20\Stub.System.Data.SQLite.Core.NetFramework.targets" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net40\Stub.System.Data.SQLite.Core.NetFramework.targets" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net45\Stub.System.Data.SQLite.Core.NetFramework.targets" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net20\System.Data.SQLite.dll.altconfig" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net40\System.Data.SQLite.dll.altconfig" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net451\System.Data.SQLite.dll.altconfig" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net45\System.Data.SQLite.dll.altconfig" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll.altconfig" />
+    <None Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0.nupkg" />
+    <None Include="packages\System.Data.SQLite.1.0.118.0\.signature.p7s" />
+    <None Include="packages\System.Data.SQLite.1.0.118.0\System.Data.SQLite.1.0.118.0.nupkg" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.118.0\.signature.p7s" />
+    <None Include="packages\System.Data.SQLite.Core.1.0.118.0\System.Data.SQLite.Core.1.0.118.0.nupkg" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\.signature.p7s" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net40\app.config.install.xdt" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net40\app.config.transform" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net40\web.config.install.xdt" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net40\web.config.transform" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net451\app.config.install.xdt" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net451\app.config.transform" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net451\web.config.install.xdt" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net451\web.config.transform" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net45\app.config.install.xdt" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net45\app.config.transform" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net45\web.config.install.xdt" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net45\web.config.transform" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net46\app.config.install.xdt" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net46\app.config.transform" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net46\web.config.install.xdt" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\content\net46\web.config.transform" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\System.Data.SQLite.EF6.1.0.118.0.nupkg" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\tools\net40\install.ps1" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\tools\net451\install.ps1" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\tools\net45\install.ps1" />
+    <None Include="packages\System.Data.SQLite.EF6.1.0.118.0\tools\net46\install.ps1" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\.signature.p7s" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\content\net20\app.config.transform" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\content\net20\web.config.transform" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\content\net40\app.config.transform" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\content\net40\web.config.transform" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\content\net451\app.config.transform" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\content\net451\web.config.transform" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\content\net45\app.config.transform" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\content\net45\web.config.transform" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\content\net46\app.config.transform" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\content\net46\web.config.transform" />
+    <None Include="packages\System.Data.SQLite.Linq.1.0.118.0\System.Data.SQLite.Linq.1.0.118.0.nupkg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Autocad\Gaviones\" />
+    <Folder Include="Autocad\Manejo Base\NewFolder1\" />
+    <Folder Include="Form\ProcessImage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\EntityFramework.6.4.4\build\Microsoft.Data.Entity.Build.Tasks.dll" />
+    <Resource Include="packages\EntityFramework.6.4.4\Icon.png" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.SqlServer.dll" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.SqlServer.xml" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.xml" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.SqlServer.dll" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.SqlServer.xml" />
+    <Resource Include="packages\EntityFramework.6.4.4\lib\netstandard2.1\EntityFramework.xml" />
+    <Resource Include="packages\EntityFramework.6.4.4\tools\about_EntityFramework6.help.txt" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\any\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\any\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\win-x86\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net40\win-x86\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\any\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\any\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\win-x86\ef6.exe" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\net45\win-x86\ef6.pdb" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\netcoreapp3.0\any\ef6.dll" />
+    <Content Include="packages\EntityFramework.6.4.4\tools\netcoreapp3.0\any\ef6.pdb" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net20\x64\SQLite.Interop.dll" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net20\x86\SQLite.Interop.dll" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net40\x64\SQLite.Interop.dll" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net40\x86\SQLite.Interop.dll" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net451\x64\SQLite.Interop.dll" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net451\x86\SQLite.Interop.dll" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net45\x64\SQLite.Interop.dll" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net45\x86\SQLite.Interop.dll" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\x64\SQLite.Interop.dll" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\x86\SQLite.Interop.dll" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net20\System.Data.SQLite.dll" />
+    <Resource Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net20\System.Data.SQLite.xml" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net40\System.Data.SQLite.dll" />
+    <Resource Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net40\System.Data.SQLite.xml" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net451\System.Data.SQLite.dll" />
+    <Resource Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net451\System.Data.SQLite.xml" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net45\System.Data.SQLite.dll" />
+    <Resource Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net45\System.Data.SQLite.xml" />
+    <Content Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll" />
+    <Resource Include="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.xml" />
+    <Content Include="packages\System.Data.SQLite.EF6.1.0.118.0\lib\net40\System.Data.SQLite.EF6.dll" />
+    <Content Include="packages\System.Data.SQLite.EF6.1.0.118.0\lib\net451\System.Data.SQLite.EF6.dll" />
+    <Content Include="packages\System.Data.SQLite.EF6.1.0.118.0\lib\net45\System.Data.SQLite.EF6.dll" />
+    <Content Include="packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll" />
+    <Content Include="packages\System.Data.SQLite.EF6.1.0.118.0\lib\netstandard2.1\System.Data.SQLite.EF6.dll" />
+    <Content Include="packages\System.Data.SQLite.Linq.1.0.118.0\lib\net20\System.Data.SQLite.Linq.dll" />
+    <Content Include="packages\System.Data.SQLite.Linq.1.0.118.0\lib\net40\System.Data.SQLite.Linq.dll" />
+    <Content Include="packages\System.Data.SQLite.Linq.1.0.118.0\lib\net451\System.Data.SQLite.Linq.dll" />
+    <Content Include="packages\System.Data.SQLite.Linq.1.0.118.0\lib\net45\System.Data.SQLite.Linq.dll" />
+    <Content Include="packages\System.Data.SQLite.Linq.1.0.118.0\lib\net46\System.Data.SQLite.Linq.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

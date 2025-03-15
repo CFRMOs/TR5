@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TR5", "TR5.vbproj", "{AE06268E-FCFC-417D-AA6A-A6CF1626027E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Remote debugger home|Any CPU = Remote debugger home|Any CPU
+		Remote debugger home|ARM64 = Remote debugger home|ARM64
+		Remote debugger home|x64 = Remote debugger home|x64
+		Remote-Debugger|Any CPU = Remote-Debugger|Any CPU
+		Remote-Debugger|ARM64 = Remote-Debugger|ARM64
+		Remote-Debugger|x64 = Remote-Debugger|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Debug|ARM64.Build.0 = Debug|ARM64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Debug|x64.ActiveCfg = Debug|x64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Debug|x64.Build.0 = Debug|x64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote debugger home|Any CPU.ActiveCfg = Remote debugger home|Any CPU
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote debugger home|Any CPU.Build.0 = Remote debugger home|Any CPU
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote debugger home|ARM64.ActiveCfg = Remote debugger home|ARM64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote debugger home|ARM64.Build.0 = Remote debugger home|ARM64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote debugger home|x64.ActiveCfg = Remote debugger home|x64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote debugger home|x64.Build.0 = Remote debugger home|x64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote-Debugger|Any CPU.ActiveCfg = Remote-Debugger|x64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote-Debugger|Any CPU.Build.0 = Remote-Debugger|x64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote-Debugger|ARM64.ActiveCfg = Remote-Debugger|ARM64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote-Debugger|ARM64.Build.0 = Remote-Debugger|ARM64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote-Debugger|x64.ActiveCfg = Remote-Debugger|x64
+		{AE06268E-FCFC-417D-AA6A-A6CF1626027E}.Remote-Debugger|x64.Build.0 = Remote-Debugger|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52B564C5-2911-4FEF-9202-0C46051A6D8C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+SECURELOAD 0
+FILEDIA 0
+'NETLOAD "C:\Users\Carlos Manuel\source\repos\RepoCad\TR5\obj\x64\Remote-Debugger\TR5.dll"
+'OPEN "D:\Desktop\Typsa - Las Placetas\MED-14-ACC-09-DREN-PARCIAL03-02-26-2025 -TYPSA-R0.dwg"
+FILEDIA 1

@@ -1,0 +1,60 @@
+	'Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+	'	'Dim acEnt As Entity = Nothing
+	'	Dim selectedLayer As String = CSelectionHelper.GetLayerByEnt()
+	'	GetDataByLayer(selectedLayer, DataGridView1)
+	'End Sub
+	'Private Sub BtmFictureLine_Click(sender As Object, e As EventArgs) Handles BtmFictureLine.Click
+	'	Dim selectedLayer As String = CSelectionHelper.GetLayerByEnt()
+	'	Me.DataGridView1.Rows.Clear()
+	'	GetDataByLayer(selectedLayer, DataGridView1)
+	'End Sub
+	' Button click event to get entity
+	'Private Sub BtGetEntity_Click(sender As Object, e As EventArgs) Handles BtGetEntity.Click
+	'	'Dim handle As String = ""
+	'	'If TabControl2.SelectedIndex <= 2 Then
+	'	'	Dim DGView As DataGridView = GetControlsDGView.GetDGView(TabControl2)
+	'	'	Dim Cuneta As New CunetasHandleDataItem
+	'	'	handle = CSelectionHelper.SelectEntityHandle().ToString()
+	'	'	Cuneta.SetPropertiesFromDWG(handle, CAcadHelp.Alignment.Handle.ToString())
+	'	'	Cuneta.AddToDGView(DGView)
+	'	'	'DateViewSet.CAddAnEntity(CAcadHelp, DGView, handle, False)
+	'	'End If
+	'End Sub
+	'Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+
+	'End Sub
+
+	'Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+	'	Dim CBox As ComboBox = ComboBox1 'If(ComboBox2.Focused, ComboBox2, ComboBox1)
+	'	Dim selectedLayer As String = Trim(CBox.Text)
+
+	'	'HandleComboBoxKeyDown(e)
+
+	'	Dim hdString As String
+	'	Dim selectedCells As DataGridViewSelectedCellCollection = DataGridView1.SelectedCells
+	'	For Each cell As DataGridViewCell In selectedCells
+	'		hdString = DataGridView1.Rows(cell.RowIndex).Cells("Handle").Value.ToString()
+	'		AutoCADUtilities.EntidadVisibility(CLHandle.GetEntityByStrHandle(hdString).Id, False)
+	'	Next
+	'End Sub
+
+	'Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+	'	Dim CBox As ComboBox = ComboBox1 'If(ComboBox2.Focused, ComboBox2, ComboBox1)
+	'	Dim selectedLayer As String = Trim(CBox.Text)
+
+	'	'HandleComboBoxKeyDown(e)
+
+	'	Dim hdString As String
+	'	Dim selectedCells As DataGridViewSelectedCellCollection = DataGridView1.SelectedCells
+	'	For Each cell As DataGridViewCell In selectedCells
+	'		hdString = DataGridView1.Rows(cell.RowIndex).Cells("Handle").Value.ToString()
+	'		AutoCADUtilities.EntidadVisibility(CLHandle.GetEntityByStrHandle(hdString).Id, True)
+	'	Next
+	'End Sub
+
+	''PROCESO PARA ACTUALIZAR EN GRUPO
+	'Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+	'	Dim DGView1 As DataGridView = Me.DataGridView3
+	'	Dim Handle As String = DGView1.SelectedRows(0).Cells("Handle").Value.ToString()
+
+	'End Sub
